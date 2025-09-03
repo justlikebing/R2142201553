@@ -1,8 +1,8 @@
 const express = require('express');
 const axios = require('axios');
 const app = express();
-
 const port = process.env.PORT || 3000;
+
 app.use(express.json());
 // Replace with your actual Authorization Token
 const authToken = 'YOUR_AUTH_TOKEN';
@@ -81,5 +81,6 @@ function getCurrentTimeInMinutes() {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
 
 
