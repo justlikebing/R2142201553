@@ -10,7 +10,6 @@ const authToken = 'YOUR_AUTH_TOKEN';
 // API Endpoint to fetch and display train schedule
 app.get('/api/train-schedule', async (req, res) => {
   try {
-    // Fetch all train details from John Doe Railway Server
     const trainData = await fetchTrainData(authToken);
 
     // Filter, process, and sort train data
@@ -60,7 +59,6 @@ function processTrainData(data) {
   return processedTrains;
 }
 
-// Placeholder: Implement logic to check if a train departs in the next 30 minutes
 function isDepartingSoon(train) {
   // Example: Assuming train.departureTime is in minutes
   const currentTime = getCurrentTimeInMinutes();
@@ -83,4 +81,5 @@ function getCurrentTimeInMinutes() {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
 
